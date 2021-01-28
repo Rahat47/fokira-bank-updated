@@ -48,6 +48,9 @@ document.querySelector('.deposit-input').addEventListener('click',() => {
         document.querySelector('.deposit-amount').value = '';
         // getting the new balance here after the deposit
         currentBalance = getCurrentBalance()
+        const succes = new Snackbar()
+        succes.init()
+        succes.show(`Successfully added! Your New Balance is $${currentBalance}`)
 
     }
 });
@@ -75,6 +78,9 @@ document.querySelector('.withdraw-input').addEventListener('click', function () 
 
         // getting new balance after a withdraw
         currentBalance = getCurrentBalance()
+        const succes = new Snackbar()
+        succes.init()
+        succes.show(`Successfully Withdrawn! Your New Balance is $${currentBalance}`)
     }
 });
 
